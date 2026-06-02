@@ -5,6 +5,7 @@ FROM nginx:1.27-alpine
 COPY index.html   /usr/share/nginx/html/index.html
 COPY logo.png     /usr/share/nginx/html/logo.png
 COPY og-image.png /usr/share/nginx/html/og-image.png
+COPY about-banner.jpg /usr/share/nginx/html/about-banner.jpg
 
 # Port + server config
 COPY default.conf /etc/nginx/conf.d/default.conf
