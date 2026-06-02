@@ -1,10 +1,12 @@
-# Rudra Tech portfolio — static site served by nginx on port 3000 (Coolify default)
-FROM nginx:alpine
+# Rudra Tech portfolio — static site on nginx, listening on 3000 (Coolify default)
+FROM nginx:1.27-alpine
 
-# Serve the single self-contained portfolio file
-COPY index.html /usr/share/nginx/html/index.html
+# Static assets at the doc root
+COPY index.html   /usr/share/nginx/html/index.html
+COPY logo.png     /usr/share/nginx/html/logo.png
+COPY og-image.png /usr/share/nginx/html/og-image.png
 
-# Listen on 3000 to match Coolify's default app/healthcheck port
+# Port + server config
 COPY default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
