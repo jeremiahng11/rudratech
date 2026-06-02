@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+ 
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+ 
+# Logs & temp
+*.log
+*.tmp
+ 
+# Node (only if you later add a build step)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+ 
